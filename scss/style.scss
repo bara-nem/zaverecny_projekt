@@ -1,0 +1,23 @@
+$c_font: rgb(27, 27, 27); 
+$b_font-size: 16px;
+$b_font: "Open Sans", sans-serif;
+$headline: "PT Serif Caption", serif;
+$headline-size: 20px;
+$c_primary: #6A513E;
+$c_section1: #DC925A;
+$c_section2: #E0D6B2;
+$c_secondary: #A0A7AB;
+
+// písmo
+
+body{
+    font-family: $b_font;
+    font-size: $b_font-size;
+    margin: 0;
+}
+
+h1{
+    color: $c_font;
+    font-family: $headline;
+    font-size: $headline-size;
+}

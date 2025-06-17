@@ -13,7 +13,7 @@ $c_primary: #6A513E;
 $c_section1: #DC925A;
 $c_section2: #E0D6B2;
 $c_secondary: #A0A7AB;
-$spacer: 30px;
+$spacer: 20px;
 
 // BODY
 
@@ -51,6 +51,9 @@ h1{
   width: 100%;
 }
 
+.aktuality__logo{
+    width: 150px;
+}
 
 
 //HLAVIČKA
@@ -61,41 +64,70 @@ h1{
     background-size: cover;
     background-position: center;
     height: 150px;
+    position: relative;
 }
 
 .header__logo{
-    max-width: 15%;
+    max-width: 25%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
     height: auto;
 }
 
-.tabs__item{
-    display: inline-block;
-    padding: 15px 10px;
+
+// HAMBURGER
+
+.menu__checkbox{
+    position: absolute;
+    left: -9999px;
+    top: 10px;
 }
 
-.tabs__link{
+.menu__toggler{
+    cursor: pointer;
+}
+
+.menu__list {
+    display: none;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    text-decoration: none;
+    background-color: $c_primary;
+    width: 200px;
 }
 
-.tabs__link:hover{
-    background-color: $c_hover;
-    color: $c_font;
-    border-radius: 3px;
-    padding: 8px;
+.menu__item{
+    border-bottom: 1px solid whitesmoke;
 }
+
+.menu__link{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu__link:hover{
+    background-color: #c26d2d;
+}
+
+.menu__checkbox:checked ~ .menu__list{
+    display: block;
+}
+
 
 //SEKCE
 
 .aktuality, .nabor, .turnaje, .fotogalerie{
     background-color: $c_section1;
-    padding: $spacer/2;
+    padding: $spacer;
     border-radius: 20px;
 }    
 
 .klub, .trenink, .kontakty{
     background-color: $c_section2;
-    padding: $spacer/2;
+    padding: $spacer;
     border-radius: 20px;
 }
 

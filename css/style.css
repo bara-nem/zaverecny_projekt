@@ -21,20 +21,31 @@ h1 {
   color: rgb(27, 27, 27);
   font-family: "PT Serif Caption", serif;
   font-size: 20px;
+  margin: 0;
 }
 
-header {
-  display: flex;
-  flex: 1 0 100%;
-  width: 550px;
-  justify-content: space-between;
-  padding: 0;
-  border: 1px solid black;
-  background-color: #6A513E;
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.container > * {
+  width: 100%;
+}
+
+.header {
+  background-image: url(../images/catcher.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
 }
 
 .header__logo {
-  max-width: 30%;
+  max-width: 15%;
   height: auto;
 }
 
@@ -55,6 +66,20 @@ header {
   padding: 8px;
 }
 
-section, footer {
-  width: 550px;
+.aktuality, .nabor, .turnaje, .fotogalerie {
+  background-color: #DC925A;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.klub, .trenink, .kontakty {
+  background-color: #E0D6B2;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.footer {
+  background-color: #A0A7AB;
+  text-align: center;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

@@ -68,7 +68,7 @@ h1{
 }
 
 .header__logo{
-    max-width: 25%;
+    max-width: 20%;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -79,14 +79,21 @@ h1{
 // HAMBURGER
 
 .menu__checkbox{
-    position: absolute;
-    left: -9999px;
-    top: 10px;
+display: none;
+
 }
 
 .menu__toggler{
     cursor: pointer;
 }
+
+.menu__icon {
+  width: 80px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 50px;
+}
+
 
 .menu__list {
     display: none;

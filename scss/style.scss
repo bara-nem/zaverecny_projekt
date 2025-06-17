@@ -1,5 +1,11 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+// PROMĚNNÉ
 $c_font: rgb(27, 27, 27); 
+$c_hover: yellow; 
 $b_font-size: 16px;
+$b_lineheight: 1.5;
 $b_font: "Open Sans", sans-serif;
 $headline: "PT Serif Caption", serif;
 $headline-size: 20px;
@@ -8,12 +14,19 @@ $c_section1: #DC925A;
 $c_section2: #E0D6B2;
 $c_secondary: #A0A7AB;
 
-// písmo
+// BODY
+
+body{
+    background-color: whitesmoke;
+}
+
+// PÍSMO
 
 body{
     font-family: $b_font;
     font-size: $b_font-size;
     margin: 0;
+    line-height: $b_lineheight;
 }
 
 h1{
@@ -21,3 +34,46 @@ h1{
     font-family: $headline;
     font-size: $headline-size;
 }
+
+// HLAVIČKA
+
+
+header{
+    display: flex;
+    flex: 1 0 100%;
+	width: 550px;
+	justify-content: space-between;
+	padding: 0;
+    border: 1px solid black;
+    background-color: $c_primary;
+}
+
+.header__logo{
+	max-width: 30%;
+    height: auto;
+}
+
+.tabs__item{
+	display: inline-block;
+	padding: 15px 10px;
+}
+
+.tabs__link{
+	list-style: none;
+	text-decoration: none;
+}
+
+.tabs__link:hover{
+	background-color: $c_hover;
+	color: $c_font;
+	border-radius: 3px;
+	padding: 8px;
+}
+
+
+//SEKCE
+
+section, footer{
+    width: 550px;
+}
+

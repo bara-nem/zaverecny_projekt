@@ -66,6 +66,8 @@ h1 {
 
 .menu__toggler {
   cursor: pointer;
+  font-size: 2rem;
+  color: hsl(47, 43%, 79%);
 }
 
 .menu__icon {
@@ -104,7 +106,7 @@ h1 {
   display: block;
 }
 
-.aktuality__logo, .nabor__logo, .trenink__logo, .turnaje__logo, .fotogalerie__logo, .kontakty__logo {
+.klub__logo, .aktuality__logo, .nabor__logo, .trenink__logo, .turnaje__logo, .fotogalerie__logo, .kontakty__logo {
   max-width: 50%;
   width: 100px;
   height: auto;
@@ -114,20 +116,28 @@ h1 {
 .klub, .trenink, .kontakty {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 20px;
   border-radius: 8px;
   gap: 1rem;
+  box-shadow: black 4px 6px 20px;
 }
 
 .aktuality, .nabor, .turnaje, .fotogalerie {
   background-color: hsla(26, 77%, 49%, 0.6);
-  cursor: pointer;
 }
 
 .klub, .trenink, .kontakty {
   background-color: hsla(47, 43%, 79%, 0.6);
+}
+
+.klub__link, .aktuality__link, .nabor__link, .trenink__link, .turnaje__link, .fotogalerie__link, .kontakty__link {
+  text-decoration: none;
+  color: rgb(27, 27, 27);
   cursor: pointer;
+}
+
+.klub__link:hover, .aktuality__link:hover, .nabor__link:hover, .trenink__link:hover, .turnaje__link:hover, .fotogalerie__link:hover, .kontakty__link:hover {
+  color: yellow;
 }
 
 .footer {

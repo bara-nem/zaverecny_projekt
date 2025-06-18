@@ -40,31 +40,40 @@ h1 {
   width: 150px;
 }
 
-.header {
+.container {
   background-image: url(../images/catcher.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 150px;
+}
+
+.header {
   position: relative;
+  height: 150px;
 }
 
 .header__logo {
-  max-width: 25%;
+  width: 200px;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: 15px;
   height: auto;
 }
 
 .menu__checkbox {
-  position: absolute;
-  left: -9999px;
-  top: 10px;
+  display: none;
 }
 
 .menu__toggler {
   cursor: pointer;
+}
+
+.menu__icon {
+  width: 80px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
 .menu__list {
@@ -72,19 +81,19 @@ h1 {
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: #6A513E;
+  background-color: hsl(26, 26%, 33%);
   width: 200px;
 }
 
 .menu__item {
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid #A0A7AB;
 }
 
 .menu__link {
   display: block;
-  padding: 10px;
+  padding: 20px;
   text-decoration: none;
-  color: white;
+  color: whitesmoke;
 }
 
 .menu__link:hover {
@@ -95,20 +104,36 @@ h1 {
   display: block;
 }
 
-.aktuality, .nabor, .turnaje, .fotogalerie {
-  background-color: #DC925A;
+.aktuality__logo, .nabor__logo, .trenink__logo, .turnaje__logo, .fotogalerie__logo, .kontakty__logo {
+  max-width: 50%;
+  width: 100px;
+  height: auto;
+}
+
+.aktuality, .nabor, .turnaje, .fotogalerie,
+.klub, .trenink, .kontakty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.aktuality, .nabor, .turnaje, .fotogalerie {
+  background-color: hsla(26, 77%, 49%, 0.6);
 }
 
 .klub, .trenink, .kontakty {
-  background-color: #E0D6B2;
-  padding: 20px;
-  border-radius: 20px;
+  background-color: hsla(47, 43%, 79%, 0.6);
 }
 
 .footer {
-  background-color: #A0A7AB;
+  background-color: hsl(26, 26%, 33%);
+  color: whitesmoke;
   text-align: center;
   font-weight: 700;
+  margin: 0;
+  border-radius: 8px;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */

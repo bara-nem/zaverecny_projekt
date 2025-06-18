@@ -46,6 +46,16 @@ h2 {
   grid-template-rows: auto;
   padding: 1rem;
   gap: 1rem;
+  background-image: url(../images/catcher.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    background-image: none;
+    background-color: hsl(47, 43%, 79%);
+  }
 }
 
 .container > * {
@@ -56,16 +66,18 @@ h2 {
   width: 150px;
 }
 
-.container {
-  background-image: url(../images/catcher.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 .header {
   position: relative;
   height: 150px;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    background-image: url(../images/catcher.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }
 }
 
 .header__logo {

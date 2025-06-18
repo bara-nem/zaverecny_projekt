@@ -75,6 +75,16 @@ border-radius: $border-radius;
     grid-template-rows: auto;
     padding: 1rem;
     gap: 1rem;
+    background-image: url(../images/catcher.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+        @media screen and (min-width: 1024px){
+        background-image: none;
+        background-color: $c-section2;
+    }
+
 }
 
 .container > * {
@@ -85,20 +95,20 @@ border-radius: $border-radius;
     width: 150px;
 }
 
-
-//OBRÁZEK NA POZADÍ
-
-.container{
-    background-image: url(../images/catcher.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-}
+//HLAVIČKA 
 
 .header{
     position: relative;
     height: 150px;
+  
+    
+    @media screen and (min-width: 1024px){
+    background-image: url(../images/catcher.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
 }
 
 // LOGO

@@ -1,20 +1,31 @@
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
-// PROMĚNNÉ
-$c_font: rgb(27, 27, 27); 
-$c_hover: yellow; 
-$b_font-size: 16px;
-$b_lineheight: 1.5;
-$b_font: "Open Sans", sans-serif;
-$headline: "PT Serif Caption", serif;
-$headline-size: 20px;
-$c_primary: hsl(26, 26%, 33%);
-$c_section1: hsl(26, 65%, 61%);
-$c_section2: hsl(47, 43%, 79%);
-$c_secondary: #A0A7AB;
-$spacer: 20px;
-$spacer_img: 15px;
+// PROMĚNNÉ BARVY
+$c-font: rgb(27, 27, 27); // hlavní text a nadpisy
+$c-hover: yellow; // text hover
+$c-primary: hsl(26, 26%, 33%); // barva pro menu
+$c-section1: hsl(26, 65%, 61%); // barva pro sekce
+$c-section2: hsl(47, 43%, 79%); // barva pro sekce a písmo patičky
+$menu-hover: #f5b608d8; // menu hover
+$c-secondary: #A0A7AB; // barva patičky
+
+// PROMĚNNÉ PÍSMO
+$main-size: 16px; // velikost textu
+$main-lineheight: 1.5; // řádkování
+$main-font: "Open Sans", sans-serif; // styp odstavců
+$headline: "PT Serif Caption", serif; //nadpisy
+$headline-size: 22px; // velikost h1
+$headline-size2: 20px; // velikost h2
+
+// PROMĚNNÉ PADDING
+$spacer: 20px; // uvnitř boxů
+$spacer-img: 15px; //odsazení img
+
+// PROMĚNNÉ IKONY A OBRÁZKY
+$button-width: 80px;  // šířka ikon
+$img-width: 300px;  // šířka obrázků v textu
+$border-radius: 8px;  // šířka obrázků v textu
 
 // BODY
 
@@ -25,17 +36,35 @@ body{
 // PÍSMO
 
 body{
-    font-family: $b_font;
-    font-size: $b_font-size;
     margin: 0;
-    line-height: $b_lineheight;
+    font-family: $main-font;
+    font-size: $main-size;
+    line-height: $main-lineheight;
 }
 
 h1{
-    color: $c_font;
+    margin: 0;
+    color: $c-font;
     font-family: $headline;
     font-size: $headline-size;
+}
+
+h2{
     margin: 0;
+    color: $c-font;
+    font-family: $headline;
+    font-size: $headline-size2;
+}
+
+// OBRÁZKY
+
+.main__img{
+width: $img-width;
+border-radius: $border-radius;
+}
+
+.home_button{
+    width: $button-width;
 }
 
 // GRID
@@ -76,8 +105,8 @@ h1{
 .header__logo{
     width: 200px;
     position: absolute;
-    right: $spacer_img;
-    top: $spacer_img;
+    right: $spacer-img;
+    top: $spacer-img;
     height: auto;
 }
 
@@ -86,22 +115,20 @@ h1{
 
 .menu__checkbox{
 display: none;
-
-
 }
 
 .menu__toggler{
     cursor: pointer;
     font-size: 2rem;
-    color: $c_section2;
+    color: $c-section2;
 }
 
 .menu__icon {
-  width: 80px;
+  width: $button-width;
   height: auto;
   vertical-align: middle;
-  margin-left: $spacer_img;
-  margin-top: $spacer_img;
+  margin-left: $spacer-img;
+  margin-top: $spacer-img;
 }
 
 
@@ -110,12 +137,12 @@ display: none;
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: $c_primary;
+    background-color: $c-primary;
     width: 200px;
 }
 
 .menu__item{
-    border-bottom: 1px solid $c_secondary;
+    border-bottom: 1px solid $c-secondary;
 }
 
 .menu__link{
@@ -126,7 +153,7 @@ display: none;
 }
 
 .menu__link:hover{
-    background-color: #c26d2d;
+    background-color: $menu-hover;
 }
 
 .menu__checkbox:checked ~ .menu__list{
@@ -147,7 +174,7 @@ display: none;
   display: flex;
   align-items: center;  
   padding: $spacer;
-  border-radius: 8px;
+  border-radius: $border-radius;
   gap: 1rem; 
   box-shadow: black 4px 6px 20px;
 }
@@ -158,27 +185,27 @@ display: none;
 }    
 
 .klub, .trenink, .kontakty{
-    background-color: hsl(47, 43%, 79%, 0.6);
+    background-color: hsla(47, 43%, 79%, 0.6);
 }
 
 .klub__link, .aktuality__link, .nabor__link, .trenink__link, .turnaje__link, .fotogalerie__link, .kontakty__link{
     text-decoration: none;
-    color: $c_font;
+    color: $c-font;
     cursor: pointer;
 }
 
 
 .klub__link:hover, .aktuality__link:hover, .nabor__link:hover, .trenink__link:hover, .turnaje__link:hover, .fotogalerie__link:hover, .kontakty__link:hover{
-    color: $c_hover;
+    color: $c-hover;
 }
 
 .footer{
-    background-color: $c_primary;
-    color: $c_section2;
+    background-color: $c-primary;
+    color: $c-section2;
     text-align: center;
     font-weight: 700;
     margin: 0;
-    border-radius: 8px;
+    border-radius: $border-radius;
     padding: $spacer / 2;
 }
 

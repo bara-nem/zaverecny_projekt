@@ -11,17 +11,33 @@ body {
 }
 
 body {
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  margin: 0;
   line-height: 1.5;
 }
 
 h1 {
+  margin: 0;
+  color: rgb(27, 27, 27);
+  font-family: "PT Serif Caption", serif;
+  font-size: 22px;
+}
+
+h2 {
+  margin: 0;
   color: rgb(27, 27, 27);
   font-family: "PT Serif Caption", serif;
   font-size: 20px;
-  margin: 0;
+}
+
+.main__img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.home_button {
+  width: 80px;
 }
 
 .container {
@@ -99,7 +115,7 @@ h1 {
 }
 
 .menu__link:hover {
-  background-color: #c26d2d;
+  background-color: rgba(245, 182, 8, 0.8470588235);
 }
 
 .menu__checkbox:checked ~ .menu__list {

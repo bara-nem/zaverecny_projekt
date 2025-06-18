@@ -153,15 +153,17 @@ display: none;
 
 .aktuality, .nabor, .turnaje, .fotogalerie{
     background-color: hsla(26, 77%, 49%, 0.6);
+    cursor: pointer;
 }    
 
 .klub, .trenink, .kontakty{
     background-color: hsl(47, 43%, 79%, 0.6);
+    cursor: pointer;
 }
 
 .footer{
     background-color: $c_primary;
-    color: whitesmoke;
+    color: $c_section2;
     text-align: center;
     font-weight: 700;
     margin: 0;

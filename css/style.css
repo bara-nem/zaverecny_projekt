@@ -122,15 +122,17 @@ h1 {
 
 .aktuality, .nabor, .turnaje, .fotogalerie {
   background-color: hsla(26, 77%, 49%, 0.6);
+  cursor: pointer;
 }
 
 .klub, .trenink, .kontakty {
   background-color: hsla(47, 43%, 79%, 0.6);
+  cursor: pointer;
 }
 
 .footer {
   background-color: hsl(26, 26%, 33%);
-  color: whitesmoke;
+  color: hsl(47, 43%, 79%);
   text-align: center;
   font-weight: 700;
   margin: 0;

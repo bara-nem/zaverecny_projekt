@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: #fef6e5;
 }
 
 body {
@@ -258,56 +258,58 @@ h2 {
   padding: 10px;
 }
 
-.page-klub {
+.page-klub, .page-nabor {
   background-color: #fef6e5;
 }
-.page-klub .main {
+.page-klub .main, .page-nabor .main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
-.page-klub .main__img {
+.page-klub .main__img, .page-nabor .main__img {
   max-width: 100%;
   height: auto;
-  flex: 1;
 }
-.page-klub .main__img--float--left {
+.page-klub .main__img--float--left, .page-nabor .main__img--float--left {
   float: left;
   width: 300px;
   height: auto;
-  margin: 0 1.5rem 1rem 0;
-  border-radius: 5px;
+  margin: 1rem 1.5rem 1.5rem 0;
+  border-radius: 8px;
 }
 @media (max-width: 750px) {
-  .page-klub .main__img--float--left {
+  .page-klub .main__img--float--left, .page-nabor .main__img--float--left {
     float: none;
     display: block;
     margin: 0 auto 1rem auto;
   }
 }
-.page-klub .main__img--float--right {
+.page-klub .main__img--float--right, .page-nabor .main__img--float--right {
   float: right;
   width: 300px;
   height: auto;
-  margin: 0 0 1.5rem 1rem;
-  border-radius: 5px;
+  margin: 1rem 0 1.5rem 1.5rem;
+  border-radius: 8px;
 }
 @media (max-width: 750px) {
-  .page-klub .main__img--float--right {
+  .page-klub .main__img--float--right, .page-nabor .main__img--float--right {
     float: none;
     display: block;
     margin: 0 auto 1rem auto;
   }
 }
-.page-klub .main__title {
-  font-size: 2rem;
+
+.main__title {
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
-.page-klub .main__nav {
+
+.main__nav {
   text-align: center;
   margin-top: 2rem;
 }
-.page-klub .main__button {
+
+.main__button {
   width: 60px;
   height: auto;
 }/*# sourceMappingURL=style.css.map */

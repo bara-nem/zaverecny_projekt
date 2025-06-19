@@ -23,7 +23,7 @@ $spacer: 20px; // uvnitř boxů
 $spacer-img: 15px; //odsazení img
 
 // PROMĚNNÉ IKONY A OBRÁZKY
-$button-width: 80px;  // šířka ikon
+$button-width: 60px;  // šířka ikon
 $img-width: 300px;  // šířka obrázků v textu
 $border-radius: 8px;  // šířka obrázků v textu
 
@@ -63,10 +63,6 @@ width: $img-width;
 border-radius: $border-radius;
 }
 
-
-.home_button{
-    width: $button-width;
-}
 
 // GRID MOBIL
 
@@ -339,37 +335,67 @@ align-items: stretch;
 // O KLUBU
 
 .page-klub {
-  background-color: white;
+  background-color: #fef6e5;
 
-  main {
-    max-width: 900px;
+  .main {
+    max-width: 1000px;
     margin: 0 auto;
     padding: $spacer;
-    background-color: $c-secondary;
   }
 
-  .main__box{
-    background-color: hsla(47, 43%, 79%, 0.6);
-    margin-bottom: 20px;
-    padding: $spacer;
-    border-radius: $border-radius;   
-    
-    .main__img{
-    float: right;
-    padding: $spacer;
-  }
- 
+
+  .main__img {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
   }
 
-    .main__box1{
-    background-color: hsla(47, 43%, 79%, 0.6);
-    padding: $spacer;
-    border-radius: $border-radius;
-    margin-bottom: 20px;
+  .main__img--float--left {
+  float: left;
+  width: $img-width;
+  height: auto;
+  margin: 0 1.5rem 1rem 0;
+  border-radius: 5px;
+}
 
-       .main__img{
-    float: left;
-    padding: $spacer;
-  }
+@media (max-width: 750px) {
+  .main__img--float--left {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
   }
 }
+
+ .main__img--float--right {
+  float: right;
+  width: $img-width;
+  height: auto;
+  margin: 0 0 1.5rem 1rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 750px) {
+  .main__img--float--right {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+  .main__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .main__nav {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .main__button {
+    width: $button-width;
+    height: auto;
+  }
+}
+
+

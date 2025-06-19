@@ -69,6 +69,7 @@ border-radius: $border-radius;
 
 // GRID
 
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -80,9 +81,57 @@ border-radius: $border-radius;
     background-size: cover;
     background-position: center;
 
-        @media screen and (min-width: 1024px){
+
+        @media screen and (min-width: 800px){
         background-image: none;
         background-color: $c-section2;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px repeat(4, 1fr) 100px;
+    align-content: stretch;
+ 
+
+ .header{
+        grid-area: header;
+        height: 300px;
+    }
+
+    .klub{
+        grid-area: klub;
+    }
+
+    .aktuality{
+        grid-area: aktuality;
+    }
+
+    .nabor{
+        grid-area: nabor;
+    }
+
+    .trenink{
+        grid-area: trenink;
+    }
+
+    .turnaje{
+        grid-area: turnaje;
+    }
+
+    .fotogalerie{
+        grid-area: fotogalerie;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+
+    grid-template-areas: 
+     "header    header     "
+     "klub      aktuality   "
+     "nabor   aktuality   "
+     "trenink   turnaje   "
+     "kontakty   fotogalerie "
+     "footer     footer     "
+     ;       
     }
 
 }
@@ -102,12 +151,11 @@ border-radius: $border-radius;
     height: 150px;
   
     
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 800px){
     background-image: url(../images/catcher.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 400px;
 }
 }
 
@@ -186,7 +234,7 @@ display: none;
   padding: $spacer;
   border-radius: $border-radius;
   gap: 1rem; 
-  box-shadow: black 4px 6px 20px;
+  box-shadow: rgb(59, 59, 59) 2px 3px 8px;
 }
 
 

@@ -51,10 +51,39 @@ h2 {
   background-size: cover;
   background-position: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
   .container {
     background-image: none;
     background-color: hsl(47, 43%, 79%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px repeat(4, 1fr) 100px;
+    align-content: stretch;
+    grid-template-areas: "header    header     " "klub      aktuality   " "nabor   aktuality   " "trenink   turnaje   " "kontakty   fotogalerie " "footer     footer     ";
+  }
+  .container .header {
+    grid-area: header;
+    height: 300px;
+  }
+  .container .klub {
+    grid-area: klub;
+  }
+  .container .aktuality {
+    grid-area: aktuality;
+  }
+  .container .nabor {
+    grid-area: nabor;
+  }
+  .container .trenink {
+    grid-area: trenink;
+  }
+  .container .turnaje {
+    grid-area: turnaje;
+  }
+  .container .fotogalerie {
+    grid-area: fotogalerie;
+  }
+  .container .footer {
+    grid-area: footer;
   }
 }
 
@@ -70,13 +99,12 @@ h2 {
   position: relative;
   height: 150px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
   .header {
     background-image: url(../images/catcher.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 400px;
   }
 }
 
@@ -147,7 +175,7 @@ h2 {
   padding: 20px;
   border-radius: 8px;
   gap: 1rem;
-  box-shadow: black 4px 6px 20px;
+  box-shadow: rgb(59, 59, 59) 2px 3px 8px;
 }
 
 .aktuality, .nabor, .turnaje, .fotogalerie {

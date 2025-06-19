@@ -258,19 +258,19 @@ h2 {
   padding: 10px;
 }
 
-.page-klub, .page-nabor, .page-training, .page-akce, .page-contact {
+.page-klub, .page-nabor, .page-training, .page-akce, .page-contact, .page-foto {
   background-color: #fef6e5;
 }
-.page-klub .main, .page-nabor .main, .page-training .main, .page-akce .main, .page-contact .main {
+.page-klub .main, .page-nabor .main, .page-training .main, .page-akce .main, .page-contact .main, .page-foto .main {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
-.page-klub .main__img, .page-nabor .main__img, .page-training .main__img, .page-akce .main__img, .page-contact .main__img {
+.page-klub .main__img, .page-nabor .main__img, .page-training .main__img, .page-akce .main__img, .page-contact .main__img, .page-foto .main__img {
   max-width: 100%;
   height: auto;
 }
-.page-klub .main__img--float--left, .page-nabor .main__img--float--left, .page-training .main__img--float--left, .page-akce .main__img--float--left, .page-contact .main__img--float--left {
+.page-klub .main__img--float--left, .page-nabor .main__img--float--left, .page-training .main__img--float--left, .page-akce .main__img--float--left, .page-contact .main__img--float--left, .page-foto .main__img--float--left {
   float: left;
   width: 300px;
   height: auto;
@@ -278,13 +278,13 @@ h2 {
   border-radius: 8px;
 }
 @media (max-width: 750px) {
-  .page-klub .main__img--float--left, .page-nabor .main__img--float--left, .page-training .main__img--float--left, .page-akce .main__img--float--left, .page-contact .main__img--float--left {
+  .page-klub .main__img--float--left, .page-nabor .main__img--float--left, .page-training .main__img--float--left, .page-akce .main__img--float--left, .page-contact .main__img--float--left, .page-foto .main__img--float--left {
     float: none;
     display: block;
     margin: 0 auto 1rem auto;
   }
 }
-.page-klub .main__img--float--right, .page-nabor .main__img--float--right, .page-training .main__img--float--right, .page-akce .main__img--float--right, .page-contact .main__img--float--right {
+.page-klub .main__img--float--right, .page-nabor .main__img--float--right, .page-training .main__img--float--right, .page-akce .main__img--float--right, .page-contact .main__img--float--right, .page-foto .main__img--float--right {
   float: right;
   width: 300px;
   height: auto;
@@ -292,7 +292,7 @@ h2 {
   border-radius: 8px;
 }
 @media (max-width: 750px) {
-  .page-klub .main__img--float--right, .page-nabor .main__img--float--right, .page-training .main__img--float--right, .page-akce .main__img--float--right, .page-contact .main__img--float--right {
+  .page-klub .main__img--float--right, .page-nabor .main__img--float--right, .page-training .main__img--float--right, .page-akce .main__img--float--right, .page-contact .main__img--float--right, .page-foto .main__img--float--right {
     float: none;
     display: block;
     margin: 0 auto 1rem auto;

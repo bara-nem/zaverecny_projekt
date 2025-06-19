@@ -67,7 +67,7 @@ border-radius: $border-radius;
     width: $button-width;
 }
 
-// GRID
+// GRID MOBIL
 
 
 .container {
@@ -82,56 +82,57 @@ border-radius: $border-radius;
     background-position: center;
 
 
+// GRID TABLET
         @media screen and (min-width: 800px){
         background-image: none;
         background-color: $c-section2;
 
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 300px repeat(4, 1fr) 100px;
-    align-content: stretch;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 300px repeat(4, 1fr) 100px;
+        align-content: stretch;
  
 
- .header{
-        grid-area: header;
-        height: 300px;
-    }
+        .header{
+            grid-area: header;
+            height: 300px;
+        }
 
-    .klub{
-        grid-area: klub;
-    }
+        .klub{
+            grid-area: klub;
+        }
 
-    .aktuality{
-        grid-area: aktuality;
-    }
+        .aktuality{
+            grid-area: aktuality;
+        }
 
-    .nabor{
-        grid-area: nabor;
-    }
+        .nabor{
+            grid-area: nabor;
+        }
 
-    .trenink{
-        grid-area: trenink;
-    }
+        .trenink{
+            grid-area: trenink;
+        }
 
-    .turnaje{
-        grid-area: turnaje;
-    }
+        .turnaje{
+            grid-area: turnaje;
+        }
 
-    .fotogalerie{
-        grid-area: fotogalerie;
-    }
+        .fotogalerie{
+            grid-area: fotogalerie;
+        }
 
-    .footer{
-        grid-area: footer;
-    }
+        .footer{
+            grid-area: footer;
+        }
 
-    grid-template-areas: 
-     "header    header     "
-     "klub      aktuality   "
-     "nabor   aktuality   "
-     "trenink   turnaje   "
-     "kontakty   fotogalerie "
-     "footer     footer     "
-     ;       
+        grid-template-areas: 
+        "header    header     "
+        "klub      aktuality   "
+        "nabor   aktuality   "
+        "trenink   turnaje   "
+        "kontakty   fotogalerie "
+        "footer     footer     "
+        ;       
     }
 
 }
@@ -159,7 +160,7 @@ border-radius: $border-radius;
 }
 }
 
-// LOGO
+// HLAVNÍ OBRÁZEK
 .header__logo{
     width: 200px;
     position: absolute;
@@ -196,7 +197,7 @@ display: none;
     padding: 0;
     list-style: none;
     background-color: $c-primary;
-    width: 200px;
+    width: 200px;    
 }
 
 .menu__item{
@@ -214,9 +215,60 @@ display: none;
     background-color: $menu-hover;
 }
 
-.menu__checkbox:checked ~ .menu__list{
-    display: block;
+
+
+// MEDIA QUERY PRO MENU
+
+@media screen and (min-width: 800px) {
+  .header {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+  }
+
+    .menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu__checkbox,
+  .menu__toggler {
+    display: none; 
+  }
+
+  .menu__list {
+    display: flex;
+    justify-content: space-around; 
+    align-items: stretch;
+    height: 100%;
+    padding: 0 15px;
+    list-style: none;
+    background-color: $c_primary; 
+    width: 100%;
+  }
+
+  .menu__item {
+    border: none;
+  }
+
+  .menu__link {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 15px;
+    color: $c-section2;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu__link:hover {
+    background-color: $c-section1; 
+  }
 }
+
+
 
 
 //SECTION

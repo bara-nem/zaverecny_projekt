@@ -158,10 +158,48 @@ h2 {
   background-color: rgba(245, 182, 8, 0.8470588235);
 }
 
-.menu__checkbox:checked ~ .menu__list {
-  display: block;
+@media screen and (min-width: 800px) {
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .menu__checkbox,
+  .menu__toggler {
+    display: none;
+  }
+  .menu__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 100%;
+    padding: 0 15px;
+    list-style: none;
+    background-color: hsl(26, 26%, 33%);
+    width: 100%;
+  }
+  .menu__item {
+    border: none;
+  }
+  .menu__link {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 15px;
+    color: hsl(47, 43%, 79%);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .menu__link:hover {
+    background-color: hsl(26, 65%, 61%);
+  }
 }
-
 .klub__logo, .aktuality__logo, .nabor__logo, .trenink__logo, .turnaje__logo, .fotogalerie__logo, .kontakty__logo {
   max-width: 50%;
   width: 100px;

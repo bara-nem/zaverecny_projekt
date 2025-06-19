@@ -111,9 +111,15 @@ h2 {
 .header__logo {
   width: 200px;
   position: absolute;
-  right: 15px;
+  left: 15px;
   top: 15px;
   height: auto;
+}
+@media screen and (min-width: 800px) {
+  .header__logo {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 .menu__checkbox {
@@ -122,6 +128,10 @@ h2 {
 
 .menu__toggler {
   cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
   font-size: 2rem;
   color: hsl(47, 43%, 79%);
 }
@@ -141,6 +151,9 @@ h2 {
   list-style: none;
   background-color: hsl(26, 26%, 33%);
   width: 200px;
+  position: absolute;
+  top: 100px;
+  right: 80px;
 }
 
 .menu__item {
@@ -151,11 +164,15 @@ h2 {
   display: block;
   padding: 20px;
   text-decoration: none;
-  color: whitesmoke;
+  color: hsl(47, 43%, 79%);
 }
 
 .menu__link:hover {
-  background-color: rgba(245, 182, 8, 0.8470588235);
+  background-color: hsl(26, 65%, 61%);
+}
+
+.menu__checkbox:checked ~ .menu__list {
+  display: block;
 }
 
 @media screen and (min-width: 800px) {
@@ -184,6 +201,7 @@ h2 {
     list-style: none;
     background-color: hsl(26, 26%, 33%);
     width: 100%;
+    position: static;
   }
   .menu__item {
     border: none;

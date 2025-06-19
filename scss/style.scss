@@ -335,11 +335,11 @@ align-items: stretch;
 
 // O KLUBU
 
-.page-klub, .page-nabor, .page-training, .page-akce {
+.page-klub, .page-nabor, .page-training, .page-akce, .page-contact {
   background-color: $c-background;
 
   .main {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     padding: $spacer;
   }

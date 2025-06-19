@@ -63,6 +63,7 @@ width: $img-width;
 border-radius: $border-radius;
 }
 
+
 .home_button{
     width: $button-width;
 }
@@ -76,6 +77,8 @@ border-radius: $border-radius;
     grid-template-rows: auto;
     padding: 1rem;
     gap: 1rem;
+
+// OBRÁZEK NA POZADÍ
     background-image: url(../images/catcher.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,7 +91,7 @@ border-radius: $border-radius;
         background-color: $c-section2;
 
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 300px repeat(4, 1fr) 100px;
+        grid-template-rows: 300px repeat(4, 1fr) 80px;
         align-content: stretch;
  
 
@@ -285,9 +288,6 @@ align-items: stretch;
   }
 }
 
-
-
-
 //SECTION
 
 .klub__logo, .aktuality__logo, .nabor__logo, .trenink__logo, .turnaje__logo, .fotogalerie__logo, .kontakty__logo{
@@ -336,3 +336,40 @@ align-items: stretch;
     padding: $spacer / 2;
 }
 
+// O KLUBU
+
+.page-klub {
+  background-color: white;
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $spacer;
+    background-color: $c-secondary;
+  }
+
+  .main__box{
+    background-color: hsla(47, 43%, 79%, 0.6);
+    margin-bottom: 20px;
+    padding: $spacer;
+    border-radius: $border-radius;   
+    
+    .main__img{
+    float: right;
+    padding: $spacer;
+  }
+ 
+  }
+
+    .main__box1{
+    background-color: hsla(47, 43%, 79%, 0.6);
+    padding: $spacer;
+    border-radius: $border-radius;
+    margin-bottom: 20px;
+
+       .main__img{
+    float: left;
+    padding: $spacer;
+  }
+  }
+}

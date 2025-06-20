@@ -36,6 +36,12 @@ h2 {
   border-radius: 8px;
 }
 
+.gallery__img {
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: #A0A7AB 2px 3px 4px;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -54,7 +60,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 300px repeat(4, 1fr) 80px;
     align-content: stretch;
-    grid-template-areas: "header    header     " "klub      aktuality   " "nabor   aktuality   " "trenink   turnaje   " "kontakty   fotogalerie " "footer     footer     ";
+    grid-template-areas: "header    header     " "klub      aktuality   " "nabor   aktuality   " "trenink   turnaje   " "fotogalerie   kontakty " "footer     footer     ";
   }
   .container .header {
     grid-area: header;
@@ -312,4 +318,34 @@ h2 {
 .main__button {
   width: 60px;
   height: auto;
+}
+
+.gallery {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.gallery__section {
+  display: grid;
+  width: 800px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  grid-area: "prvni druhy treti" "ctvrty paty sesty" "sedmy osmy devaty";
+}
+@media (max-width: 750px) {
+  .gallery__section {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+  }
+  .gallery__section .gallery__img {
+    width: 350px;
+  }
 }/*# sourceMappingURL=style.css.map */

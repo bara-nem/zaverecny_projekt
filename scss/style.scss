@@ -26,6 +26,7 @@ $spacer-img: 15px; //odsazení img
 // PROMĚNNÉ IKONY A OBRÁZKY
 $button-width: 60px;  // šířka ikon
 $img-width: 300px;  // šířka obrázků v textu
+$img-gallery-width: 250px;  // šířka obrázků v galerii
 $border-radius: 8px;  // šířka obrázků v textu
 
 // BODY
@@ -62,6 +63,12 @@ h2{
 .main__img{
 width: $img-width;
 border-radius: $border-radius;
+}
+
+.gallery__img{
+width: $img-gallery-width;
+border-radius: $border-radius;
+box-shadow: #A0A7AB 2px 3px 4px;
 }
 
 
@@ -130,7 +137,7 @@ border-radius: $border-radius;
         "klub      aktuality   "
         "nabor   aktuality   "
         "trenink   turnaje   "
-        "kontakty   fotogalerie "
+        "fotogalerie   kontakty "
         "footer     footer     "
         ;       
     }
@@ -330,10 +337,10 @@ align-items: stretch;
     font-weight: 700;
     margin: 0;
     border-radius: $border-radius;
-    padding: $spacer / 2;
+    padding: calc($spacer / 2);
 }
 
-// O KLUBU
+// O KLUBU, NÁBOR, TRÉNINK, SOUSTŘEDĚNÍ, KONTAKTY, FOTO-ÚVOD
 
 .page-klub, .page-nabor, .page-training, .page-akce, .page-contact, .page-foto {
   background-color: $c-background;
@@ -396,4 +403,38 @@ align-items: stretch;
   }
 
 
+// FOTOGALERIE
+.gallery {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $spacer;
+    border: 1px solid black;
+    border-radius: $border-radius;
+    background-color: white;
+  }
 
+
+.gallery__section{
+  display: grid;
+  width: 800px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  grid-area: 
+  "prvni druhy treti"
+  "ctvrty paty sesty"
+  "sedmy osmy devaty"
+  ;
+
+  @media (max-width: 750px) {
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 5px;
+
+  .gallery__img{
+width: 350px;
+}
+  }
+}

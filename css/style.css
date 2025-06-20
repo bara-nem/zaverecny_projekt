@@ -36,67 +36,6 @@ h2 {
   border-radius: 8px;
 }
 
-.gallery__img {
-  width: 250px;
-  border-radius: 8px;
-  box-shadow: #A0A7AB 2px 3px 4px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  padding: 1rem;
-  gap: 1rem;
-  background-image: url(../images/catcher.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-@media screen and (min-width: 800px) {
-  .container {
-    background-image: none;
-    background-color: hsl(47, 43%, 79%);
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 300px repeat(4, 1fr) 80px;
-    align-content: stretch;
-    grid-template-areas: "header    header     " "klub      aktuality   " "nabor   aktuality   " "trenink   turnaje   " "fotogalerie   kontakty " "footer     footer     ";
-  }
-  .container .header {
-    grid-area: header;
-    height: 300px;
-  }
-  .container .klub {
-    grid-area: klub;
-  }
-  .container .aktuality {
-    grid-area: aktuality;
-  }
-  .container .nabor {
-    grid-area: nabor;
-  }
-  .container .trenink {
-    grid-area: trenink;
-  }
-  .container .turnaje {
-    grid-area: turnaje;
-  }
-  .container .fotogalerie {
-    grid-area: fotogalerie;
-  }
-  .container .footer {
-    grid-area: footer;
-  }
-}
-
-.container > * {
-  width: 100%;
-}
-
-.aktuality__logo {
-  width: 150px;
-}
-
 .header {
   position: relative;
   height: 150px;
@@ -220,6 +159,61 @@ h2 {
     background-color: hsl(26, 65%, 61%);
   }
 }
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 1rem;
+  gap: 1rem;
+  background-image: url(../images/catcher.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 800px) {
+  .container {
+    background-image: none;
+    background-color: hsl(47, 43%, 79%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px repeat(4, 1fr) 80px;
+    align-content: stretch;
+    grid-template-areas: "header    header     " "klub      aktuality   " "nabor   aktuality   " "trenink   turnaje   " "fotogalerie   kontakty " "footer     footer     ";
+  }
+  .container .header {
+    grid-area: header;
+    height: 300px;
+  }
+  .container .klub {
+    grid-area: klub;
+  }
+  .container .aktuality {
+    grid-area: aktuality;
+  }
+  .container .nabor {
+    grid-area: nabor;
+  }
+  .container .trenink {
+    grid-area: trenink;
+  }
+  .container .turnaje {
+    grid-area: turnaje;
+  }
+  .container .fotogalerie {
+    grid-area: fotogalerie;
+  }
+  .container .footer {
+    grid-area: footer;
+  }
+}
+
+.container > * {
+  width: 100%;
+}
+
+.aktuality__logo {
+  width: 150px;
+}
+
 .klub__logo, .aktuality__logo, .nabor__logo, .trenink__logo, .turnaje__logo, .fotogalerie__logo, .kontakty__logo {
   max-width: 50%;
   width: 100px;
@@ -251,7 +245,7 @@ h2 {
 }
 
 .klub__link:hover, .aktuality__link:hover, .nabor__link:hover, .trenink__link:hover, .turnaje__link:hover, .fotogalerie__link:hover, .kontakty__link:hover {
-  color: yellow;
+  color: #f5f511;
 }
 
 .footer {
@@ -262,6 +256,21 @@ h2 {
   margin: 0;
   border-radius: 8px;
   padding: 10px;
+}
+
+.main__title {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.main__nav {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.main__button {
+  width: 60px;
+  height: auto;
 }
 
 .page-klub, .page-nabor, .page-training, .page-akce, .page-contact, .page-foto {
@@ -305,21 +314,6 @@ h2 {
   }
 }
 
-.main__title {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-.main__nav {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.main__button {
-  width: 60px;
-  height: auto;
-}
-
 .gallery {
   max-width: 900px;
   margin: 0 auto;
@@ -327,6 +321,12 @@ h2 {
   border: 1px solid black;
   border-radius: 8px;
   background-color: white;
+}
+
+.gallery__img {
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: #A0A7AB 2px 3px 4px;
 }
 
 .gallery__section {

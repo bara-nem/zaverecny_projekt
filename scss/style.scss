@@ -1,76 +1,181 @@
+@use "promenne";
+
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
-
-// PROMĚNNÉ BARVY
-$c-background: #fef6e5; // barva patičky
-$c-font: rgb(27, 27, 27); // hlavní text a nadpisy
-$c-hover: yellow; // text hover
-$c-primary: hsl(26, 26%, 33%); // barva pro menu
-$c-section1: hsl(26, 65%, 61%); // barva pro sekce
-$c-section2: hsl(47, 43%, 79%); // barva pro sekce a písmo patičky
-$menu-hover: #f5b608d8; // menu hover
-$c-secondary: #A0A7AB; // barva patičky
-
-// PROMĚNNÉ PÍSMO
-$main-size: 16px; // velikost textu
-$main-lineheight: 1.5; // řádkování
-$main-font: "Open Sans", sans-serif; // styp odstavců
-$headline: "PT Serif Caption", serif; //nadpisy
-$headline-size: 22px; // velikost h1
-$headline-size2: 20px; // velikost h2
-
-// PROMĚNNÉ PADDING
-$spacer: 20px; // uvnitř boxů
-$spacer-img: 15px; //odsazení img
-
-// PROMĚNNÉ IKONY A OBRÁZKY
-$button-width: 60px;  // šířka ikon
-$img-width: 300px;  // šířka obrázků v textu
-$img-gallery-width: 250px;  // šířka obrázků v galerii
-$border-radius: 8px;  // šířka obrázků v textu
 
 // BODY
 
 body{
-    background-color: $c-background;
+    background-color: promenne.$c-background;
 }
 
 // PÍSMO
 
 body{
     margin: 0;
-    font-family: $main-font;
-    font-size: $main-size;
-    line-height: $main-lineheight;
+    font-family: promenne.$main-font;
+    font-size: promenne.$main-size;
+    line-height: promenne.$main-lineheight;
 }
 
 h1{
     margin: 0;
-    color: $c-font;
-    font-family: $headline;
-    font-size: $headline-size;
+    color: promenne.$c-font;
+    font-family: promenne.$headline;
+    font-size: promenne.$headline-size;
 }
 
 h2{
     margin: 0;
-    color: $c-font;
-    font-family: $headline;
-    font-size: $headline-size2;
+    color: promenne.$c-font;
+    font-family: promenne.$headline;
+    font-size: promenne.$headline-size2;
 }
 
 // OBRÁZKY
 
 .main__img{
-width: $img-width;
-border-radius: $border-radius;
+width: promenne.$img-width;
+border-radius: promenne.$border-radius;
 }
 
-.gallery__img{
-width: $img-gallery-width;
-border-radius: $border-radius;
-box-shadow: #A0A7AB 2px 3px 4px;
+
+
+//HLAVIČKA 
+.header{
+    position: relative;
+    height: 150px;
+  
+    
+    @media screen and (min-width: 800px){
+    background-image: url(../images/catcher.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 }
 
+// HLAVNÍ OBRÁZEK
+.header__logo{
+    width: 200px;
+    position: absolute;
+    left: promenne.$spacer-img;
+    top: promenne.$spacer-img;
+    height: auto;
+
+    @media screen and (min-width: 800px) {
+  width: 100%;
+  max-width: 300px;
+    }
+}
+
+// HAMBURGER
+.menu__checkbox{
+display: none;
+}
+
+.menu__toggler{
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    font-size: 2rem;
+    color: promenne.$c-section2;
+}
+
+.menu__icon {
+  width: promenne.$button-width;
+  height: auto;
+  vertical-align: middle;
+  margin-left: promenne.$spacer-img;
+  margin-top: promenne.$spacer-img;
+}
+
+
+.menu__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: promenne.$c-primary;
+    width: 200px;    
+    position: absolute;
+    top: 100px;
+    right: 80px;
+}
+
+.menu__item{
+    border-bottom: 1px solid promenne.$c-secondary;
+}
+
+.menu__link{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: promenne.$c-section2;
+}
+
+.menu__link:hover{
+    background-color: promenne.$c-section1;
+}
+
+.menu__checkbox:checked ~ .menu__list{
+    display: block;
+}
+
+// MEDIA QUERY PRO MENU
+
+@media screen and (min-width: 800px) {
+  .header {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+  }
+
+    .menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu__checkbox,
+  .menu__toggler {
+    display: none; 
+  }
+
+  .menu__list {
+    display: flex;
+    justify-content: space-around; 
+    align-items: stretch;
+    height: 100%;
+    padding: 0 15px;
+    list-style: none;
+    background-color: promenne.$c_primary; 
+    width: 100%;
+    position: static;
+
+  }
+
+  .menu__item {
+    border: none;
+  }
+
+  .menu__link {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 15px;
+    color: promenne.$c-section2;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu__link:hover {
+    background-color: promenne.$c-section1; 
+  }
+}
 
 // GRID MOBIL
 
@@ -92,7 +197,7 @@ box-shadow: #A0A7AB 2px 3px 4px;
 // GRID TABLET
         @media screen and (min-width: 800px){
         background-image: none;
-        background-color: $c-section2;
+        background-color: promenne.$c-section2;
 
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 300px repeat(4, 1fr) 80px;
@@ -152,145 +257,6 @@ box-shadow: #A0A7AB 2px 3px 4px;
     width: 150px;
 }
 
-//HLAVIČKA 
-
-.header{
-    position: relative;
-    height: 150px;
-  
-    
-    @media screen and (min-width: 800px){
-    background-image: url(../images/catcher.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-}
-
-// HLAVNÍ OBRÁZEK
-.header__logo{
-    width: 200px;
-    position: absolute;
-    left: $spacer-img;
-    top: $spacer-img;
-    height: auto;
-
-    @media screen and (min-width: 800px) {
-  width: 100%;
-  max-width: 300px;
-    }
-}
-
-
-// HAMBURGER
-
-
-.menu__checkbox{
-display: none;
-}
-
-.menu__toggler{
-    cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 100;
-    font-size: 2rem;
-    color: $c-section2;
-}
-
-.menu__icon {
-  width: $button-width;
-  height: auto;
-  vertical-align: middle;
-  margin-left: $spacer-img;
-  margin-top: $spacer-img;
-}
-
-
-.menu__list {
-    display: none;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: $c-primary;
-    width: 200px;    
-    position: absolute;
-    top: 100px;
-    right: 80px;
-}
-
-.menu__item{
-    border-bottom: 1px solid $c-secondary;
-}
-
-.menu__link{
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    color: $c-section2;
-}
-
-.menu__link:hover{
-    background-color: $c-section1;
-}
-
-.menu__checkbox:checked ~ .menu__list{
-    display: block;
-}
-
-// MEDIA QUERY PRO MENU
-
-@media screen and (min-width: 800px) {
-  .header {
-position: relative;
-display: flex;
-flex-direction: column;
-align-items: stretch;
-  }
-
-    .menu {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .menu__checkbox,
-  .menu__toggler {
-    display: none; 
-  }
-
-  .menu__list {
-    display: flex;
-    justify-content: space-around; 
-    align-items: stretch;
-    height: 100%;
-    padding: 0 15px;
-    list-style: none;
-    background-color: $c_primary; 
-    width: 100%;
-    position: static;
-
-  }
-
-  .menu__item {
-    border: none;
-  }
-
-  .menu__link {
-    display: inline-block;
-    margin: 0;
-    padding: 10px 15px;
-    color: $c-section2;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .menu__link:hover {
-    background-color: $c-section1; 
-  }
-}
 
 //SECTION
 
@@ -304,8 +270,8 @@ align-items: stretch;
 .klub, .trenink, .kontakty {
   display: flex;
   align-items: center;  
-  padding: $spacer;
-  border-radius: $border-radius;
+  padding: promenne.$spacer;
+  border-radius: promenne.$border-radius;
   gap: 1rem; 
   box-shadow: rgb(59, 59, 59) 2px 3px 8px;
 }
@@ -321,71 +287,26 @@ align-items: stretch;
 
 .klub__link, .aktuality__link, .nabor__link, .trenink__link, .turnaje__link, .fotogalerie__link, .kontakty__link{
     text-decoration: none;
-    color: $c-font;
+    color: promenne.$c-font;
     cursor: pointer;
 }
 
 
 .klub__link:hover, .aktuality__link:hover, .nabor__link:hover, .trenink__link:hover, .turnaje__link:hover, .fotogalerie__link:hover, .kontakty__link:hover{
-    color: $c-hover;
+    color: promenne.$c-hover;
 }
 
 .footer{
-    background-color: $c-primary;
-    color: $c-section2;
+    background-color: promenne.$c-primary;
+    color: promenne.$c-section2;
     text-align: center;
     font-weight: 700;
     margin: 0;
-    border-radius: $border-radius;
-    padding: calc($spacer / 2);
+    border-radius: promenne.$border-radius;
+    padding: calc(promenne.$spacer / 2);
 }
 
-// O KLUBU, NÁBOR, TRÉNINK, SOUSTŘEDĚNÍ, KONTAKTY, FOTO-ÚVOD
 
-.page-klub, .page-nabor, .page-training, .page-akce, .page-contact, .page-foto {
-  background-color: $c-background;
-
-  .main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: $spacer;
-  }
-
-
-  .main__img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .main__img--float--left {
-  float: left;
-  width: $img-width;
-  height: auto;
-  margin: 1rem 1.5rem 1.5rem 0;
-  border-radius: $border-radius;
-  
-  @media (max-width: 750px) {
-    float: none;
-    display: block;
-    margin: 0 auto 1rem auto;
-  }
-}
-
-.main__img--float--right {
-  float: right;
-  width: $img-width;
-  height: auto;
-  margin: 1rem 0 1.5rem 1.5rem;
-  border-radius: $border-radius;
-@media (max-width: 750px) {
-
-    float: none;
-    display: block;
-    margin: 0 auto 1rem auto;
-  }
-}
-
-}
 
   .main__title {
     margin-bottom: 1rem;
@@ -398,21 +319,72 @@ align-items: stretch;
   }
 
   .main__button {
-    width: $button-width;
+    width: promenne.$button-width;
     height: auto;
   }
 
+// O KLUBU, NÁBOR, TRÉNINK, SOUSTŘEDĚNÍ, KONTAKTY, FOTO-ÚVOD
+
+.page-klub, .page-nabor, .page-training, .page-akce, .page-contact, .page-foto {
+  background-color: promenne.$c-background;
+
+  .main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: promenne.$spacer;
+  }
+
+
+  .main__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .main__img--float--left {
+  float: left;
+  width: promenne.$img-width;
+  height: auto;
+  margin: 1rem 1.5rem 1.5rem 0;
+  border-radius: promenne.$border-radius;
+  
+  @media (max-width: 750px) {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+.main__img--float--right {
+  float: right;
+  width: promenne.$img-width;
+  height: auto;
+  margin: 1rem 0 1.5rem 1.5rem;
+  border-radius: promenne.$border-radius;
+@media (max-width: 750px) {
+
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+}
 
 // FOTOGALERIE
 .gallery {
     max-width: 900px;
     margin: 0 auto;
-    padding: $spacer;
+    padding: promenne.$spacer;
     border: 1px solid black;
-    border-radius: $border-radius;
+    border-radius: promenne.$border-radius;
     background-color: white;
   }
 
+  .gallery__img{
+width: promenne.$img-gallery-width;
+border-radius: promenne.$border-radius;
+box-shadow: #A0A7AB 2px 3px 4px;
+}
 
 .gallery__section{
   display: grid;

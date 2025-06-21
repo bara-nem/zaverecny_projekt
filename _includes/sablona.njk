@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canaries Praha</title>
+    <link rel="stylesheet" href="/css/style.css">
+ <!-- Fonty -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hlavicka -->
+<div class="container">
+<header class="header">
+  <img class="header__logo" src="/images/logo1.png" alt="Logo Canaries">
+
+
+
+
+   <nav class="menu">
+    <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+
+    <label for="menu-checkbox" class="menu__toggler">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 80"
+            width="30"
+            height="30"
+            class="menu__icon"
+            aria-hidden="true">
+        <rect width="100" height="10" fill="#FFD700"></rect>
+        <rect y="30" width="100" height="10" fill="#FFD700"></rect>
+        <rect y="60" width="100" height="10" fill="#FFD700"></rect>
+            </svg>
+    Menu
+    </label>
+
+        <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="/aktuality/index.html">Aktuality</a></li>
+            <li class="menu__item"><a class="menu__link" href="/o_klubu/index.html">O klubu</a></li>
+            <li class="menu__item"><a class="menu__link" href="/nabor/index.html">Nábor</a></li>
+            <li class="menu__item"><a class="menu__link" href="/trenink/index.html">Trénink</a></li>
+            <li class="menu__item"><a class="menu__link" href="/turnaje/index.html" >Turnaje</a></li>
+            <li class="menu__item"><a class="menu__link" href="/fotogalerie/index.html">Fotogalerie</a></li>
+            <li class="menu__item"><a class="menu__link" href="/kontakty/index.html" >Kontakty</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+{{ content | safe }}
+
+
+<footer class="footer">
+<p>© Canaries Praha</p>
+</footer>
+</div>
+
+</body>
+</html>

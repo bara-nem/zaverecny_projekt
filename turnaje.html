@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turnaje a soustředění</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="page-akce">
+---
+layout: sablona.njk
+title: Turnaje a akce
+---
 
+<div class="page-akce">
 <main class="main">
     <div class="main__section main__section--one">
         <h1 class="main__title">Jednodenní akce</h1>
@@ -16,7 +12,7 @@
 
     <div class="main__section main__section--two">
         <h1 class="main__title">Vícedenní akce</h1>
-            <img class="main__img main__img--float--right" src="images/soustredeni.jpg">
+            <img class="main__img main__img--float--right" src="/images/soustredeni.jpg">
         <p>
             V případě, že budeme v místě turnaje nocovat, počítáme se zajištěním jídla pro všechny.
         </p>
@@ -33,9 +29,8 @@
     </div>
 </main>
 
-<div class="main__nav">
-<a href="index.html" ><img class="main__button" src="images/home_button.png" alt="Zpět"></a>
-</div>
 
-</body>
-</html>
+<div class="main__nav">
+<a href="/index.html" ><img class="main__button" src="/images/home_button.png" alt="Zpět"></a>
+</div>
+</div>

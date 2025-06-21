@@ -379,11 +379,10 @@ align-items: stretch;
 
 // FOTOGALERIE
 .gallery {
-    max-width: 900px;
-    max-width: max-content;
+    width: 800px;
     overflow: hidden;
-    margin: 0 auto;
-    padding: promenne.$spacer;
+ 
+    padding: 15px;
     border: 1px solid promenne.$c-primary;
     border-radius: promenne.$border-radius;
     background-color: white;
@@ -398,8 +397,6 @@ align-items: stretch;
 
 .gallery__section{
   display: grid;
-  width: 800px;
-  margin: 0 auto;
   grid-template-columns: repeat(3, 250px);
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;

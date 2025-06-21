@@ -91,7 +91,7 @@ h2 {
 }
 
 .gallery__img {
-  width: 250px;
+  width: 200px;
   border-radius: 8px;
   box-shadow: #A0A7AB 2px 3px 4px;
 }
@@ -382,12 +382,9 @@ body {
 }
 
 .gallery {
-  max-width: 900px;
-  max-width: -moz-max-content;
-  max-width: max-content;
+  width: 800px;
   overflow: hidden;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid hsl(26, 26%, 33%);
   border-radius: 8px;
   background-color: white;
@@ -402,8 +399,6 @@ body {
 
 .gallery__section {
   display: grid;
-  width: 800px;
-  margin: 0 auto;
   grid-template-columns: repeat(3, 250px);
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;

@@ -1,5 +1,4 @@
 @use "promenne";
-@use "mobil";
 @use "article";
 
 html { box-sizing: border-box; }
@@ -47,6 +46,84 @@ border-radius: promenne.$border-radius;
 box-shadow: #A0A7AB 2px 3px 4px;
 }
 
+
+// GRID MOBIL
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 1rem;
+    gap: 1rem;
+
+// OBRÁZEK NA POZADÍ
+    background-image: url(../images/catcher.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+// GRID TABLET
+        @media screen and (min-width: 800px){
+        background-image: none;
+        background-color: promenne.$c-section2;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 300px repeat(4, 1fr) 80px;
+        align-content: stretch;
+ 
+
+        .header{
+            grid-area: header;
+            height: 300px;
+        }
+
+        .klub{
+            grid-area: klub;
+        }
+
+        .aktuality{
+            grid-area: aktuality;
+        }
+
+        .nabor{
+            grid-area: nabor;
+        }
+
+        .trenink{
+            grid-area: trenink;
+        }
+
+        .turnaje{
+            grid-area: turnaje;
+        }
+
+        .fotogalerie{
+            grid-area: fotogalerie;
+        }
+
+        .footer{
+            grid-area: footer;
+        }
+
+        grid-template-areas: 
+        "header    header     "
+        "klub      aktuality   "
+        "nabor   aktuality   "
+        "trenink   turnaje   "
+        "fotogalerie   kontakty "
+        "footer     footer     "
+        ;       
+    }
+
+}
+
+
+
+
+.container > * {
+  width: 100%;
+}
 
 
 //HLAVIČKA 
@@ -187,9 +264,6 @@ align-items: stretch;
 }
 
 
-.container > * {
-  width: 100%;
-}
 
 .aktuality__logo{
     width: 150px;
@@ -263,9 +337,11 @@ align-items: stretch;
 
 .page-klub, .page-nabor, .page-training, .page-akce, .page-contact, .page-foto {
   background-color: promenne.$c-background;
+  max-width: 800px;
+  padding: 30px;
 
   .main {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     padding: promenne.$spacer;
   }

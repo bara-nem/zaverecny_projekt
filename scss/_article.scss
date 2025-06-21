@@ -1,0 +1,59 @@
+@use "promenne";
+
+
+.page-article {
+  background-color: promenne.$c-background;
+
+  .article {
+    max-width: 800px;
+    max-height: max-content;
+    overflow: hidden;
+    border: 1px solid promenne.$c-primary;
+    background-color: white;
+    margin: 0 auto;
+    padding: promenne.$spacer;
+    border-radius: promenne.$border-radius;
+  }
+
+  .article__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .article__title--small{
+    font-size: 16px;
+    font-family: promenne.$headline;
+    color: #a8a7a7;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .article__img--float--left {
+  float: left;
+  width: promenne.$img-width;
+  height: auto;
+  margin: 1rem 1.5rem 1.5rem 0;
+  border-radius: promenne.$border-radius;
+  
+  @media (max-width: 750px) {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+
+  
+.article__img--float--right {
+  float: right;
+  width: promenne.$img-width;
+  height: auto;
+  margin: 1rem 0 1.5rem 1.5rem;
+  border-radius: promenne.$border-radius;
+@media (max-width: 750px) {
+
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+}
+}

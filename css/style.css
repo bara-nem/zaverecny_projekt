@@ -1,3 +1,104 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 1rem;
+  gap: 1rem;
+  background-image: url(../images/catcher.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 800px) {
+  .container {
+    background-image: none;
+    background-color: hsl(47, 43%, 79%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px repeat(4, 1fr) 80px;
+    align-content: stretch;
+    grid-template-areas: "header    header     " "klub      aktuality   " "nabor   aktuality   " "trenink   turnaje   " "fotogalerie   kontakty " "footer     footer     ";
+  }
+  .container .header {
+    grid-area: header;
+    height: 300px;
+  }
+  .container .klub {
+    grid-area: klub;
+  }
+  .container .aktuality {
+    grid-area: aktuality;
+  }
+  .container .nabor {
+    grid-area: nabor;
+  }
+  .container .trenink {
+    grid-area: trenink;
+  }
+  .container .turnaje {
+    grid-area: turnaje;
+  }
+  .container .fotogalerie {
+    grid-area: fotogalerie;
+  }
+  .container .footer {
+    grid-area: footer;
+  }
+}
+
+.page-article {
+  background-color: #fef6e5;
+}
+.page-article .article {
+  max-width: 800px;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  overflow: hidden;
+  border: 1px solid hsl(26, 26%, 33%);
+  background-color: white;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+.page-article .article__img {
+  max-width: 100%;
+  height: auto;
+}
+.page-article .article__title--small {
+  font-size: 16px;
+  font-family: "PT Serif Caption", serif;
+  color: #a8a7a7;
+  font-style: italic;
+  margin: 0;
+}
+.page-article .article__img--float--left {
+  float: left;
+  width: 300px;
+  height: auto;
+  margin: 1rem 1.5rem 1.5rem 0;
+  border-radius: 8px;
+}
+@media (max-width: 750px) {
+  .page-article .article__img--float--left {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+.page-article .article__img--float--left .article__img--float--right {
+  float: right;
+  width: 300px;
+  height: auto;
+  margin: 1rem 0 1.5rem 1.5rem;
+  border-radius: 8px;
+}
+@media (max-width: 750px) {
+  .page-article .article__img--float--left .article__img--float--right {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -34,6 +135,12 @@ h2 {
 .main__img {
   width: 300px;
   border-radius: 8px;
+}
+
+.gallery__img {
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: #A0A7AB 2px 3px 4px;
 }
 
 .header {
@@ -159,53 +266,6 @@ h2 {
     background-color: hsl(26, 65%, 61%);
   }
 }
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  padding: 1rem;
-  gap: 1rem;
-  background-image: url(../images/catcher.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-@media screen and (min-width: 800px) {
-  .container {
-    background-image: none;
-    background-color: hsl(47, 43%, 79%);
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 300px repeat(4, 1fr) 80px;
-    align-content: stretch;
-    grid-template-areas: "header    header     " "klub      aktuality   " "nabor   aktuality   " "trenink   turnaje   " "fotogalerie   kontakty " "footer     footer     ";
-  }
-  .container .header {
-    grid-area: header;
-    height: 300px;
-  }
-  .container .klub {
-    grid-area: klub;
-  }
-  .container .aktuality {
-    grid-area: aktuality;
-  }
-  .container .nabor {
-    grid-area: nabor;
-  }
-  .container .trenink {
-    grid-area: trenink;
-  }
-  .container .turnaje {
-    grid-area: turnaje;
-  }
-  .container .fotogalerie {
-    grid-area: fotogalerie;
-  }
-  .container .footer {
-    grid-area: footer;
-  }
-}
-
 .container > * {
   width: 100%;
 }
@@ -316,17 +376,21 @@ h2 {
 
 .gallery {
   max-width: 900px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow: hidden;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid hsl(26, 26%, 33%);
   border-radius: 8px;
   background-color: white;
 }
 
-.gallery__img {
-  width: 250px;
-  border-radius: 8px;
-  box-shadow: #A0A7AB 2px 3px 4px;
+.gallery__title--small {
+  font-size: 16px;
+  color: #a8a7a7;
+  font-style: italic;
+  margin-bottom: 15px;
 }
 
 .gallery__section {

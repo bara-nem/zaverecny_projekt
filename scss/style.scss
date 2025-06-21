@@ -1,4 +1,6 @@
 @use "promenne";
+@use "mobil";
+@use "article";
 
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
@@ -39,6 +41,12 @@ width: promenne.$img-width;
 border-radius: promenne.$border-radius;
 }
 
+ .gallery__img{
+width: promenne.$img-gallery-width;
+border-radius: promenne.$border-radius;
+box-shadow: #A0A7AB 2px 3px 4px;
+}
+
 
 
 //HLAVIČKA 
@@ -68,6 +76,7 @@ border-radius: promenne.$border-radius;
   max-width: 300px;
     }
 }
+
 
 // HAMBURGER
 .menu__checkbox{
@@ -124,8 +133,8 @@ display: none;
     display: block;
 }
 
-// MEDIA QUERY PRO MENU
 
+// MEDIA QUERY PRO MENU
 @media screen and (min-width: 800px) {
   .header {
 position: relative;
@@ -177,77 +186,6 @@ align-items: stretch;
   }
 }
 
-// GRID MOBIL
-
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    padding: 1rem;
-    gap: 1rem;
-
-// OBRÁZEK NA POZADÍ
-    background-image: url(../images/catcher.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-
-// GRID TABLET
-        @media screen and (min-width: 800px){
-        background-image: none;
-        background-color: promenne.$c-section2;
-
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 300px repeat(4, 1fr) 80px;
-        align-content: stretch;
- 
-
-        .header{
-            grid-area: header;
-            height: 300px;
-        }
-
-        .klub{
-            grid-area: klub;
-        }
-
-        .aktuality{
-            grid-area: aktuality;
-        }
-
-        .nabor{
-            grid-area: nabor;
-        }
-
-        .trenink{
-            grid-area: trenink;
-        }
-
-        .turnaje{
-            grid-area: turnaje;
-        }
-
-        .fotogalerie{
-            grid-area: fotogalerie;
-        }
-
-        .footer{
-            grid-area: footer;
-        }
-
-        grid-template-areas: 
-        "header    header     "
-        "klub      aktuality   "
-        "nabor   aktuality   "
-        "trenink   turnaje   "
-        "fotogalerie   kontakty "
-        "footer     footer     "
-        ;       
-    }
-
-}
 
 .container > * {
   width: 100%;
@@ -371,18 +309,21 @@ align-items: stretch;
 // FOTOGALERIE
 .gallery {
     max-width: 900px;
+    max-width: max-content;
+    overflow: hidden;
     margin: 0 auto;
     padding: promenne.$spacer;
-    border: 1px solid black;
+    border: 1px solid promenne.$c-primary;
     border-radius: promenne.$border-radius;
     background-color: white;
   }
 
-  .gallery__img{
-width: promenne.$img-gallery-width;
-border-radius: promenne.$border-radius;
-box-shadow: #A0A7AB 2px 3px 4px;
-}
+ .gallery__title--small{
+    font-size: 16px;
+    color: #a8a7a7;
+    font-style: italic;
+    margin-bottom: 15px;
+ }
 
 .gallery__section{
   display: grid;

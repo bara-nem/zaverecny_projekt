@@ -78,27 +78,27 @@ box-shadow: #A0A7AB 2px 3px 4px;
             height: 300px;
         }
 
-        .klub{
+        .section--klub{
             grid-area: klub;
         }
 
-        .aktuality{
+        .section--aktuality{
             grid-area: aktuality;
         }
 
-        .nabor{
+        .section--nabor{
             grid-area: nabor;
         }
 
-        .trenink{
+        .section--trenink{
             grid-area: trenink;
         }
 
-        .turnaje{
+        .section--turnaje{
             grid-area: turnaje;
         }
 
-        .fotogalerie{
+        .section--fotogalerie{
             grid-area: fotogalerie;
         }
 
@@ -272,14 +272,13 @@ align-items: stretch;
 
 //SECTION
 
-.klub__logo, .aktuality__logo, .nabor__logo, .trenink__logo, .turnaje__logo, .fotogalerie__logo, .kontakty__logo{
+.section__logo{
     max-width: 50%;
     width: 100px;
     height: auto;
 }
 
-.aktuality, .nabor, .turnaje, .fotogalerie,
-.klub, .trenink, .kontakty {
+.section {
   display: flex;
   align-items: center;  
   padding: promenne.$spacer;
@@ -289,22 +288,22 @@ align-items: stretch;
 }
 
 
-.aktuality, .nabor, .turnaje, .fotogalerie{
+.section--aktuality, .section--nabor, .section--turnaje, .section--fotogalerie{
     background-color: hsla(26, 77%, 49%, 0.6);
 }    
 
-.klub, .trenink, .kontakty{
+.section--klub, .section--trenink, .section--kontakty{
     background-color: hsla(47, 43%, 79%, 0.6);
 }
 
-.klub__link, .aktuality__link, .nabor__link, .trenink__link, .turnaje__link, .fotogalerie__link, .kontakty__link{
+.section__title{
     text-decoration: none;
     color: promenne.$c-font;
     cursor: pointer;
 }
 
 
-.klub__link:hover, .aktuality__link:hover, .nabor__link:hover, .trenink__link:hover, .turnaje__link:hover, .fotogalerie__link:hover, .kontakty__link:hover{
+.section__title:hover{
     color: promenne.$c-hover;
 }
 

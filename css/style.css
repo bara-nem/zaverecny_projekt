@@ -114,7 +114,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 300px repeat(4, 1fr) 80px;
     align-content: stretch;
-    grid-template-areas: "header    header     " "klub      aktuality   " "nabor   aktuality   " "trenink   turnaje   " "fotogalerie   kontakty " "footer     footer     ";
+    grid-template-areas: "header       header" "klub         aktuality" "nabor        aktuality" "trenink      turnaje" "fotogalerie  kontakty" "footer       footer";
   }
   .container .header {
     grid-area: header;
@@ -332,21 +332,21 @@ h2 {
   height: auto;
 }
 
-.page-klub, .page-nabor, .page-training, .page-akce, .page-contact, .page-foto {
+.main--club, .main--recruitment, .main--training, .main--action, .main--contact, .main--gallery {
   background-color: #fef6e5;
   max-width: 800px;
+  margin: 0 auto;
   padding: 30px;
 }
-.page-klub .main, .page-nabor .main, .page-training .main, .page-akce .main, .page-contact .main, .page-foto .main {
-  max-width: 800px;
-  margin: 0 auto;
+.main--club .main, .main--recruitment .main, .main--training .main, .main--action .main, .main--contact .main, .main--gallery .main {
+  width: 800px;
   padding: 20px;
 }
-.page-klub .main__img, .page-nabor .main__img, .page-training .main__img, .page-akce .main__img, .page-contact .main__img, .page-foto .main__img {
+.main--club .main__img, .main--recruitment .main__img, .main--training .main__img, .main--action .main__img, .main--contact .main__img, .main--gallery .main__img {
   max-width: 100%;
   height: auto;
 }
-.page-klub .main__img--float--left, .page-nabor .main__img--float--left, .page-training .main__img--float--left, .page-akce .main__img--float--left, .page-contact .main__img--float--left, .page-foto .main__img--float--left {
+.main--club .main__img--float-left, .main--recruitment .main__img--float-left, .main--training .main__img--float-left, .main--action .main__img--float-left, .main--contact .main__img--float-left, .main--gallery .main__img--float-left {
   float: left;
   width: 300px;
   height: auto;
@@ -354,13 +354,13 @@ h2 {
   border-radius: 8px;
 }
 @media (max-width: 750px) {
-  .page-klub .main__img--float--left, .page-nabor .main__img--float--left, .page-training .main__img--float--left, .page-akce .main__img--float--left, .page-contact .main__img--float--left, .page-foto .main__img--float--left {
+  .main--club .main__img--float-left, .main--recruitment .main__img--float-left, .main--training .main__img--float-left, .main--action .main__img--float-left, .main--contact .main__img--float-left, .main--gallery .main__img--float-left {
     float: none;
     display: block;
     margin: 0 auto 1rem auto;
   }
 }
-.page-klub .main__img--float--right, .page-nabor .main__img--float--right, .page-training .main__img--float--right, .page-akce .main__img--float--right, .page-contact .main__img--float--right, .page-foto .main__img--float--right {
+.main--club .main__img--float-right, .main--recruitment .main__img--float-right, .main--training .main__img--float-right, .main--action .main__img--float-right, .main--contact .main__img--float-right, .main--gallery .main__img--float-right {
   float: right;
   width: 300px;
   height: auto;
@@ -368,7 +368,7 @@ h2 {
   border-radius: 8px;
 }
 @media (max-width: 750px) {
-  .page-klub .main__img--float--right, .page-nabor .main__img--float--right, .page-training .main__img--float--right, .page-akce .main__img--float--right, .page-contact .main__img--float--right, .page-foto .main__img--float--right {
+  .main--club .main__img--float-right, .main--recruitment .main__img--float-right, .main--training .main__img--float-right, .main--action .main__img--float-right, .main--contact .main__img--float-right, .main--gallery .main__img--float-right {
     float: none;
     display: block;
     margin: 0 auto 1rem auto;

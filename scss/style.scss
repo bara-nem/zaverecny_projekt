@@ -107,18 +107,16 @@ box-shadow: #A0A7AB 2px 3px 4px;
         }
 
         grid-template-areas: 
-        "header    header     "
-        "klub      aktuality   "
-        "nabor   aktuality   "
-        "trenink   turnaje   "
-        "fotogalerie   kontakty "
-        "footer     footer     "
+        "header       header"
+        "klub         aktuality"
+        "nabor        aktuality"
+        "trenink      turnaje"
+        "fotogalerie  kontakty"
+        "footer       footer"
         ;       
     }
 
 }
-
-
 
 
 .container > * {
@@ -334,14 +332,14 @@ align-items: stretch;
 
 // O KLUBU, NÁBOR, TRÉNINK, SOUSTŘEDĚNÍ, KONTAKTY, FOTO-ÚVOD
 
-.page-klub, .page-nabor, .page-training, .page-akce, .page-contact, .page-foto {
+.main--club, .main--recruitment, .main--training, .main--action, .main--contact, .main--gallery {
   background-color: promenne.$c-background;
   max-width: 800px;
+  margin: 0 auto;
   padding: 30px;
 
   .main {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 800px;
     padding: promenne.$spacer;
   }
 
@@ -351,7 +349,7 @@ align-items: stretch;
     height: auto;
   }
 
-  .main__img--float--left {
+  .main__img--float-left {
   float: left;
   width: promenne.$img-width;
   height: auto;
@@ -365,7 +363,7 @@ align-items: stretch;
   }
 }
 
-.main__img--float--right {
+.main__img--float-right {
   float: right;
   width: promenne.$img-width;
   height: auto;

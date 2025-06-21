@@ -49,6 +49,18 @@ box-shadow: #A0A7AB 2px 3px 4px;
 
 // GRID MOBIL
 
+body {
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 800px) {
+    background-image: url('../images/catcher.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -56,28 +68,14 @@ box-shadow: #A0A7AB 2px 3px 4px;
     padding: 1rem;
     gap: 1rem;
 
-// OBRÁZEK NA POZADÍ
-    background-image: url(../images/catcher.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-
 // GRID TABLET
         @media screen and (min-width: 800px){
         background-image: none;
         background-color: promenne.$c-section2;
-
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 300px repeat(4, 1fr) 80px;
+        grid-template-rows: repeat(4, 1fr) 80px;
         align-content: stretch;
  
-
-        .header{
-            grid-area: header;
-            height: 300px;
-        }
-
         .section--klub{
             grid-area: klub;
         }
@@ -107,7 +105,6 @@ box-shadow: #A0A7AB 2px 3px 4px;
         }
 
         grid-template-areas: 
-        "header       header"
         "klub         aktuality"
         "nabor        aktuality"
         "trenink      turnaje"
@@ -131,6 +128,7 @@ box-shadow: #A0A7AB 2px 3px 4px;
   
     
     @media screen and (min-width: 800px){
+    height: 350px;
     background-image: url(../images/catcher.jpg);
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,0 +1,16 @@
+@use "promenne";
+
+.main--aktuality {
+  background-color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+
+}
+
+
+.main__title--small{
+font-family: $headline;
+font-size: $headline-size2;
+}
+

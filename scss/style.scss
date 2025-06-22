@@ -1,5 +1,6 @@
 @use "promenne";
 @use "article";
+@use "aktuality";
 
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
@@ -330,7 +331,7 @@ align-items: stretch;
 
 // O KLUBU, NÁBOR, TRÉNINK, SOUSTŘEDĚNÍ, KONTAKTY, FOTO-ÚVOD
 
-.main--club, .main--recruitment, .main--training, .main--action, .main--contact, .main--gallery, .main--aktuality {
+.main--club, .main--recruitment, .main--training, .main--action, .main--contact, .main--gallery{
   background-color: promenne.$c-background;
   max-width: 800px;
   margin: 0 auto;

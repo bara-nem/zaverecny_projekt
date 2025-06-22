@@ -9,40 +9,42 @@
     background-color: white;
     margin: 0 auto;
     padding: promenne.$spacer;
-    border-radius: promenne.$border-radius;
-  }
-
-  .article__perex{
-    font-weight: 700;
-  }
-
-  .article__img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  border-radius: promenne.$border-radius;
-
-  &--float-left {
-    float: left;
-    width: 200px; // nebo jiná vhodná šířka
-    margin: 0 1.5rem 1rem 0;
-
-    @media (max-width: 800px) {
-      float: none;
-      display: block;
-      margin: 1rem auto;
-      width: 100%;
-    }
-  }
-}
-
-  .article__title--small{
+    border-radius: promenne.$border-radius;  
+    
+    &__meta {
     font-size: 16px;
     font-family: promenne.$headline;
     color: #a8a7a7;
     font-style: italic;
     margin: 0;
+     }
+    
+    &__perex {
+    font-weight: 700;
+    }
+
+    &__img {
+    max-width: 100%;
+    width: 300px;
+    float: left;
+    height: auto;
+    display: block;
+    margin: 0 15px 5px 0;
+    border-radius: promenne.$border-radius;
+
+      @media (max-width: 800px) {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+        width: 100%;
+      }
+    }
+
   }
+
+
+
+
+
 
   

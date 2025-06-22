@@ -9,38 +9,32 @@
   padding: 20px;
   border-radius: 8px;
 }
-
-.article__perex {
-  font-weight: 700;
-}
-
-.article__img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 8px;
-}
-.article__img--float-left {
-  float: left;
-  width: 200px;
-  margin: 0 1.5rem 1rem 0;
-}
-@media (max-width: 800px) {
-  .article__img--float-left {
-    float: none;
-    display: block;
-    margin: 1rem auto;
-    width: 100%;
-  }
-}
-
-.article__title--small {
+.article__meta {
   font-size: 16px;
   font-family: "PT Serif Caption", serif;
   color: #a8a7a7;
   font-style: italic;
   margin: 0;
+}
+.article__perex {
+  font-weight: 700;
+}
+.article__img {
+  max-width: 100%;
+  width: 300px;
+  float: left;
+  height: auto;
+  display: block;
+  margin: 0 15px 5px 0;
+  border-radius: 8px;
+}
+@media (max-width: 800px) {
+  .article__img {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+  }
 }
 
 html {
@@ -329,21 +323,21 @@ body {
   height: auto;
 }
 
-.main--club, .main--recruitment, .main--training, .main--action, .main--contact, .main--gallery {
+.main--club, .main--recruitment, .main--training, .main--action, .main--contact, .main--gallery, .main--aktuality {
   background-color: #fef6e5;
   max-width: 800px;
   margin: 0 auto;
   padding: 30px;
 }
-.main--club .main, .main--recruitment .main, .main--training .main, .main--action .main, .main--contact .main, .main--gallery .main {
+.main--club .main, .main--recruitment .main, .main--training .main, .main--action .main, .main--contact .main, .main--gallery .main, .main--aktuality .main {
   width: 800px;
   padding: 20px;
 }
-.main--club .main__img, .main--recruitment .main__img, .main--training .main__img, .main--action .main__img, .main--contact .main__img, .main--gallery .main__img {
+.main--club .main__img, .main--recruitment .main__img, .main--training .main__img, .main--action .main__img, .main--contact .main__img, .main--gallery .main__img, .main--aktuality .main__img {
   max-width: 100%;
   height: auto;
 }
-.main--club .main__img--float-left, .main--recruitment .main__img--float-left, .main--training .main__img--float-left, .main--action .main__img--float-left, .main--contact .main__img--float-left, .main--gallery .main__img--float-left {
+.main--club .main__img--float-left, .main--recruitment .main__img--float-left, .main--training .main__img--float-left, .main--action .main__img--float-left, .main--contact .main__img--float-left, .main--gallery .main__img--float-left, .main--aktuality .main__img--float-left {
   float: left;
   width: 300px;
   height: auto;
@@ -351,13 +345,13 @@ body {
   border-radius: 8px;
 }
 @media (max-width: 750px) {
-  .main--club .main__img--float-left, .main--recruitment .main__img--float-left, .main--training .main__img--float-left, .main--action .main__img--float-left, .main--contact .main__img--float-left, .main--gallery .main__img--float-left {
+  .main--club .main__img--float-left, .main--recruitment .main__img--float-left, .main--training .main__img--float-left, .main--action .main__img--float-left, .main--contact .main__img--float-left, .main--gallery .main__img--float-left, .main--aktuality .main__img--float-left {
     float: none;
     display: block;
     margin: 0 auto 1rem auto;
   }
 }
-.main--club .main__img--float-right, .main--recruitment .main__img--float-right, .main--training .main__img--float-right, .main--action .main__img--float-right, .main--contact .main__img--float-right, .main--gallery .main__img--float-right {
+.main--club .main__img--float-right, .main--recruitment .main__img--float-right, .main--training .main__img--float-right, .main--action .main__img--float-right, .main--contact .main__img--float-right, .main--gallery .main__img--float-right, .main--aktuality .main__img--float-right {
   float: right;
   width: 300px;
   height: auto;
@@ -365,7 +359,7 @@ body {
   border-radius: 8px;
 }
 @media (max-width: 750px) {
-  .main--club .main__img--float-right, .main--recruitment .main__img--float-right, .main--training .main__img--float-right, .main--action .main__img--float-right, .main--contact .main__img--float-right, .main--gallery .main__img--float-right {
+  .main--club .main__img--float-right, .main--recruitment .main__img--float-right, .main--training .main__img--float-right, .main--action .main__img--float-right, .main--contact .main__img--float-right, .main--gallery .main__img--float-right, .main--aktuality .main__img--float-right {
     float: none;
     display: block;
     margin: 0 auto 1rem auto;

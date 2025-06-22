@@ -1,10 +1,23 @@
 ---
 layout: sablona.njk
-title: Canaries Praha
+title: Aktuality
 ---
 
+<main class="main main--aktuality">
+<div class="main__section">
+<h1 class="main__title"> Aktuality </h1>
+<p><strong>Sledujte, co se děje v klubu Canaries – od zápasových výsledků přes pozvánky na akce až po zprávy z tréninků a výjezdů.</strong></p>
 
+{% for prispevek in collections.aktuality | reverse %}
+
+<h2>{{ prispevek.data.title }}</h2>
+<p>{{ prispevek.data.perex }}</p>
+<p><a href=" {{ prispevek.url }}"> Celý článek</a> </p>
+
+{% endfor %}
 
 <div class="main__nav">
 <a href="/index.html" ><img class="main__button" src="/images/home_button.png" alt="Zpět"></a>
 </div>
+</div>
+</main>

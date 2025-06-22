@@ -1,1 +1,1 @@
-https://bara-nem.github.io/zaverecny_projekt/
+https://softballovy-klub.netlify.app/ 

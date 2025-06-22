@@ -10,9 +10,17 @@ title: Canaries Praha
     <img class="section__logo" src="/images/aktuality.png">
     <div class="section__content">
         <h1><a class="section__title" href="/aktuality/index.html" >Aktuality</a></h1>
+        <!--
         <p>
             Sledujte, co se děje v klubu Canaries – od zápasových výsledků přes pozvánky na akce až po zprávy z tréninků a výjezdů.
         </p>
+        -->
+
+        {% for prispevek in collections.aktuality | reverse | limit(3) %}
+        <h2 class="main__title main__title--small">{{ prispevek.data.title }}</h2>
+        <p>{{ prispevek.data.perex }}</p>
+        <p><a href=" {{ prispevek.url }}"> Celý článek</a> </p>
+        {% endfor %}
     </div>
 </section> 
 

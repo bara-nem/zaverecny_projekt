@@ -6,7 +6,13 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
  
   eleventyConfig.addPassthroughCopy("fslightbox.js");
+
+  eleventyConfig.addFilter("limit", function (arr, limit) {
+return arr.slice(0, limit);
+});
+
 }
+
 
 export const config = {
   // jako šablonu nebo soubor s obsahem

@@ -30,8 +30,18 @@ h1{
 h2{
     margin: 0;
     color: promenne.$c-font;
-    font-family: promenne.$headline;
+    font-family: promenne.$headline;  
     font-size: promenne.$headline-size2;
+}
+
+a{
+  text-decoration: none;
+  color: promenne.$c-secondary;
+}
+
+a:hover{
+  text-decoration: none;
+  color: promenne.$c-primary;
 }
 
 // OBRÁZKY
@@ -114,6 +124,14 @@ body {
         ;       
     }
 
+}
+
+.aktuality__clanky--home {
+  display: none;
+
+  @media screen and (min-width: 800px) {
+    display: block;
+  }
 }
 
 
@@ -288,6 +306,21 @@ align-items: stretch;
 .section--aktuality, .section--nabor, .section--turnaje, .section--fotogalerie{
     background-color: hsla(26, 77%, 49%, 0.6);
 }    
+
+@media screen and (min-width: 800px) {
+  .section--aktuality {
+  background-color: #e9e9e7;
+  border: 1px solid black;
+
+  .section__logo--act{
+    display: none;
+  }
+  .section__content--act{
+    padding: 20px;
+  }
+  }
+
+  }  
 
 .section--klub, .section--trenink, .section--kontakty{
     background-color: hsla(47, 43%, 79%, 0.6);

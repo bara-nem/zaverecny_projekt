@@ -248,7 +248,7 @@ align-items: stretch;
   }
 
   .menu__list {
-    display: flex;
+    display: flex !important;
     justify-content: space-around; 
     align-items: stretch;
     height: 100%;
